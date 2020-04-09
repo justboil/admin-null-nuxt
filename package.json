@@ -1,6 +1,6 @@
 {
   "name": "admin-null-nuxt-bulma-dashboard",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Admin Null - Nuxt Bulma Dashboard",
   "author": "JustBoil.me",
   "private": true,
@@ -14,15 +14,15 @@
   },
   "dependencies": {
     "@mdi/font": "^4.9.95",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
     "chart.js": "^2.9.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
-    "vue-chartjs": "^3.5.0",
-    "nuxt": "^2.0.0",
-    "nuxt-buefy": "^0.3.2",
-    "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "nuxt": "^2.12.2",
+    "nuxt-buefy": "^0.3.26",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

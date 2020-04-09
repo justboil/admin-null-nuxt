@@ -70,7 +70,7 @@
           <b-icon :icon="darkModeToggleIcon" custom-size="default" />
           <span>Dark mode</span>
         </a>
-        <a href="https://justboil.me/bulma-admin-template/null" class="navbar-item has-divider is-desktop-icon-only" title="About">
+        <a href="https://justboil.me/bulma-admin-template/null-nuxt" class="navbar-item has-divider is-desktop-icon-only" title="About">
           <b-icon icon="help-circle-outline" custom-size="default" />
           <span>About</span>
         </a>

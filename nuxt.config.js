@@ -32,6 +32,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/after-each.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
