@@ -73,7 +73,7 @@ export default {
         'About',
         [
           {
-            href: 'https://admin-null.justboil.me',
+            href: 'https://admin-null-nuxt.justboil.me',
             label: 'Premium Demo',
             icon: 'credit-card'
           },
