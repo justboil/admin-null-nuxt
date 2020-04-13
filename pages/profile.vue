@@ -50,6 +50,11 @@ export default {
       'userName',
       'userEmail'
     ])
+  },
+  head () {
+    return {
+      title: 'Profile — Admin Null Nuxt.js Bulma'
+    }
   }
 }
 </script>

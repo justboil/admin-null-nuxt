@@ -149,6 +149,11 @@ export default {
         queue: false
       })
     }
+  },
+  head () {
+    return {
+      title: 'Forms — Admin Null Nuxt.js Bulma'
+    }
   }
 }
 </script>

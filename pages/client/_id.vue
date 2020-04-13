@@ -204,6 +204,11 @@ export default {
         })
       }, 500)
     }
+  },
+  head () {
+    return {
+      title: 'Client — Admin Null Nuxt.js Bulma'
+    }
   }
 }
 </script>

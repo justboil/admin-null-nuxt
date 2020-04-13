@@ -151,6 +151,11 @@ export default {
         labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
       }
     }
+  },
+  head () {
+    return {
+      title: 'Dashboard — Admin Null Nuxt.js Bulma'
+    }
   }
 }
 </script>

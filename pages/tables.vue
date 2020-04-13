@@ -64,6 +64,11 @@ export default {
         'Tables'
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Tables — Admin Null Nuxt.js Bulma'
+    }
   }
 }
 </script>
