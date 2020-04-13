@@ -5,7 +5,7 @@
   >
     <aside-tools :is-main-menu="true">
       <span slot="label">
-        <b>Admin</b> Null
+        <b>Admin</b> Null Nuxt.js
       </span>
     </aside-tools>
     <div class="menu is-menu-main">
