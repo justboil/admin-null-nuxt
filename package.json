@@ -1,6 +1,6 @@
 {
   "name": "admin-null-nuxt-bulma-dashboard",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Admin Null - Nuxt Bulma Dashboard",
   "author": "JustBoil.me",
   "private": true,
@@ -13,7 +13,7 @@
     "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "deploy:gh-pages": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist"
+    "deploy:gh-pages": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist -t"
   },
   "dependencies": {
     "@mdi/font": "^4.9.95",

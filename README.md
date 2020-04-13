@@ -1,6 +1,6 @@
 # [Admin Null — Free Nuxt Bulma Admin Dashboard](https://justboil.me/bulma-admin-template/null-nuxt)
 
-![version](https://img.shields.io/badge/version-1.1.0-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![version](https://img.shields.io/badge/version-1.1.2-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 [![Nuxt Bulma free admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-free.png)](https://justboil.me/bulma-admin-template/null-nuxt)
 

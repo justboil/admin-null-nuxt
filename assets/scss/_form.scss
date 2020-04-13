@@ -73,3 +73,17 @@
   }
 }
 
+.b-slider {
+  .b-slider-track {
+    background: transparent;
+    border: 1px solid $base-color;
+  }
+
+  @each $state-class, $state-color, $state-text in $state-colors {
+    &.is-#{$state-class} {
+      .b-slider-track {
+        border: 1px solid $state-color;
+      }
+    }
+  }
+}

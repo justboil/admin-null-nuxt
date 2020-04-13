@@ -167,7 +167,7 @@ export default {
     getData () {
       if (this.$route.params.id) {
         axios
-          .get('/data-sources/clients.json')
+          .get(`${this.$router.options.base}data-sources/clients.json`)
           .then((r) => {
             const item = find(r.data.data, item => item.id === parseInt(this.$route.params.id))
 
