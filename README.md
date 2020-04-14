@@ -2,7 +2,7 @@
 
 [![version](https://img.shields.io/badge/version-1.1.3-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)
 
-[![Nuxt Bulma free admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-free.png)](https://justboil.github.io/admin-null-nuxt/)
+[![Nuxt Bulma free admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
 
 **Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma Admin Dashboard.
 
