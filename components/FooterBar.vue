@@ -4,8 +4,8 @@
       <div class="level">
         <div class="level-left">
           <div class="level-item">
-            <div>
-              <b>&copy; {{ year }}, JustBoil.me</b> &mdash; Admin Null Nuxt.js demo
+            <div class="footer-copyright">
+              <b>&copy; {{ year }}, JustBoil.me</b> &mdash; Admin Null Nuxt.js demo <span class="tag">v1.1.3</span>
             </div>
           </div>
         </div>
