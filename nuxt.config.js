@@ -72,6 +72,13 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      if (!config.externals) {
+        config.externals = {}
+      }
+
+      // Remove moment.js from chart.js
+      // https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc
+      config.externals.moment = 'moment'
     }
   }
 }
