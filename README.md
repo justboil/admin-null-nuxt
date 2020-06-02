@@ -4,13 +4,11 @@
 
 [![Nuxt Bulma free admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
 
-**Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma Admin Dashboard.
+**Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma admin dashboard.
 
 * Free under MIT License
-* PWA/SPA — Single page app
 * Built with Bulma, Buefy, Vue.js & Nuxt.js
 * SCSS sources with variables
-* More than 17 custom components
 * [Premium version](https://justboil.me/bulma-admin-template/null-nuxt) available
 
 ## Table of Contents
@@ -45,7 +43,7 @@ https://justboil.github.io/admin-null-nuxt/
 
 #### Premium Dashboard Demo
 
-https://admin-null.justboil.me
+https://admin-null-nuxt.justboil.me
 
 ## Quick Start
 
@@ -75,7 +73,7 @@ To generate static project run `npm run generate`
 
 ## Browser Support
 
-We try to make sure Dashboard works well in latest versions of all major browsers
+We try to make sure Dashboard works well in the latest versions of all major browsers
 
 <img src="https://justboil.me/images/browsers-svg/chrome.svg" width="64" height="64" alt="Chrome"> <img src="https://justboil.me/images/browsers-svg/firefox.svg" width="64" height="64" alt="Firefox"> <img src="https://justboil.me/images/browsers-svg/edge.svg" width="64" height="64" alt="Edge"> <img src="https://justboil.me/images/browsers-svg/safari.svg" width="64" height="64" alt="Safari"> <img src="https://justboil.me/images/browsers-svg/opera.svg" width="64" height="64" alt="Opera">
 
