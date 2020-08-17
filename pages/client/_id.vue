@@ -3,9 +3,9 @@
     <title-bar :title-stack="titleStack" />
     <hero-bar>
       {{ heroTitle }}
-      <router-link slot="right" :to="heroRouterLinkTo" class="button">
+      <nuxt-link slot="right" :to="heroRouterLinkTo" class="button">
         {{ heroRouterLinkLabel }}
-      </router-link>
+      </nuxt-link>
     </hero-bar>
     <section class="section is-main-section">
       <notification class="is-info">
@@ -169,7 +169,7 @@ export default {
     },
     heroRouterLinkTo() {
       if (this.isProfileExists) {
-        return { name: 'client.new' }
+        return '/client'
       } else {
         return '/'
       }

@@ -3,9 +3,9 @@
     <title-bar :title-stack="titleStack" />
     <hero-bar>
       Profile
-      <router-link slot="right" to="/" class="button">
+      <nuxt-link slot="right" to="/" class="button">
         Dashboard
-      </router-link>
+      </nuxt-link>
     </hero-bar>
     <section class="section is-main-section">
       <tiles>
