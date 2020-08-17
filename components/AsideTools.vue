@@ -13,12 +13,12 @@ export default {
   props: {
     icon: {
       type: String,
-      default: null
+      default: null,
     },
     label: {
       type: String,
-      default: null
-    }
-  }
+      default: null,
+    },
+  },
 }
 </script>

@@ -18,41 +18,41 @@ export default {
   components: {
     FooterBar,
     AsideMenu,
-    NavBar
+    NavBar,
   },
   computed: {
-    menu () {
+    menu() {
       return [
         'General',
         [
           {
             to: '/',
             icon: 'desktop-mac',
-            label: 'Dashboard'
-          }
+            label: 'Dashboard',
+          },
         ],
         'Examples',
         [
           {
             action: 'dark-mode-toggle',
             label: 'Dark / White',
-            icon: 'weather-night'
+            icon: 'weather-night',
           },
           {
             to: '/tables',
             label: 'Tables',
             icon: 'table',
-            updateMark: true
+            updateMark: true,
           },
           {
             to: '/forms',
             label: 'Forms',
-            icon: 'square-edit-outline'
+            icon: 'square-edit-outline',
           },
           {
             to: '/profile',
             label: 'Profile',
-            icon: 'account-circle'
+            icon: 'account-circle',
           },
           {
             label: 'Submenus',
@@ -61,50 +61,50 @@ export default {
             menu: [
               {
                 href: '#void',
-                label: 'Sub-item One'
+                label: 'Sub-item One',
               },
               {
                 href: '#void',
-                label: 'Sub-item Two'
-              }
-            ]
-          }
+                label: 'Sub-item Two',
+              },
+            ],
+          },
         ],
         'About',
         [
           {
             href: 'https://admin-null-nuxt.justboil.me',
             label: 'Premium Demo',
-            icon: 'credit-card'
+            icon: 'credit-card',
           },
           {
             href: 'https://justboil.me/bulma-admin-template/null-nuxt',
             label: 'About',
-            icon: 'help-circle'
-          }
-        ]
+            icon: 'help-circle',
+          },
+        ],
       ]
-    }
+    },
   },
-  created () {
+  created() {
     this.$store.commit('user', {
       name: 'John Doe',
       email: 'john@example.com',
-      avatar: 'https://avatars.dicebear.com/v2/gridy/John-Doe.svg'
+      avatar: 'https://avatars.dicebear.com/v2/gridy/John-Doe.svg',
     })
   },
-  mounted () {
+  mounted() {
     document.documentElement.classList.add('has-aside-left')
     document.documentElement.classList.add('has-aside-mobile-transition')
     document.documentElement.classList.add('has-navbar-fixed-top')
     document.documentElement.classList.add('has-aside-expanded')
   },
   methods: {
-    menuClick (item) {
+    menuClick(item) {
       if (item.action && item.action === 'dark-mode-toggle') {
         this.$store.commit('darkModeToggle')
       }
-    }
-  }
+    },
+  },
 }
 </script>

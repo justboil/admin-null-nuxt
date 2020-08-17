@@ -12,11 +12,11 @@
         <profile-update-form class="tile is-child" />
         <card-component title="Profile" icon="account" class="tile is-child">
           <user-avatar class="image has-max-width is-aligned-center" />
-          <hr>
+          <hr />
           <b-field label="Name">
             <b-input :value="userName" custom-class="is-static" readonly />
           </b-field>
-          <hr>
+          <hr />
           <b-field label="E-mail">
             <b-input :value="userEmail" custom-class="is-static" readonly />
           </b-field>
@@ -38,23 +38,25 @@ import Tiles from '@/components/Tiles'
 import UserAvatar from '@/components/UserAvatar'
 export default {
   name: 'Profile',
-  components: { UserAvatar, Tiles, PasswordUpdateForm, ProfileUpdateForm, HeroBar, TitleBar, CardComponent },
-  computed: {
-    titleStack () {
-      return [
-        'Admin',
-        'Profile'
-      ]
-    },
-    ...mapState([
-      'userName',
-      'userEmail'
-    ])
+  components: {
+    UserAvatar,
+    Tiles,
+    PasswordUpdateForm,
+    ProfileUpdateForm,
+    HeroBar,
+    TitleBar,
+    CardComponent,
   },
-  head () {
+  computed: {
+    titleStack() {
+      return ['Admin', 'Profile']
+    },
+    ...mapState(['userName', 'userEmail']),
+  },
+  head() {
     return {
-      title: 'Profile — Admin Null Nuxt.js Bulma'
+      title: 'Profile — Admin Null Nuxt.js Bulma',
     }
-  }
+  },
 }
 </script>

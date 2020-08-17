@@ -4,7 +4,7 @@
       <div class="level-left">
         <div class="level-item">
           <ul>
-            <li v-for="(title,index) in titleStack" :key="index">
+            <li v-for="(title, index) in titleStack" :key="index">
               {{ title }}
             </li>
           </ul>
@@ -13,7 +13,11 @@
       <div class="level-right">
         <div class="level-item">
           <div class="buttons is-right">
-            <a href="https://admin-null-nuxt.justboil.me/" target="_blank" class="button is-light">
+            <a
+              href="https://admin-null-nuxt.justboil.me/"
+              target="_blank"
+              class="button is-light"
+            >
               <b-icon icon="credit-card" custom-size="default" />
               <span>Premium Demo</span>
             </a>
@@ -30,8 +34,8 @@ export default {
   props: {
     titleStack: {
       type: Array,
-      default: () => []
-    }
-  }
+      default: () => [],
+    },
+  },
 }
 </script>

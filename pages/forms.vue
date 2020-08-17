@@ -12,7 +12,13 @@
         <form @submit.prevent="submit">
           <b-field label="From" horizontal>
             <b-field>
-              <b-input v-model="form.name" icon="account" placeholder="Name" name="name" required />
+              <b-input
+                v-model="form.name"
+                icon="account"
+                placeholder="Name"
+                name="name"
+                required
+              />
             </b-field>
             <b-field>
               <b-input
@@ -36,20 +42,42 @@
             </b-field>
           </b-field>
           <b-field label="Department" horizontal>
-            <b-select v-model="form.department" placeholder="Select a department" required>
-              <option v-for="(department, index) in departments" :key="index" :value="department">
+            <b-select
+              v-model="form.department"
+              placeholder="Select a department"
+              required
+            >
+              <option
+                v-for="(department, index) in departments"
+                :key="index"
+                :value="department"
+              >
                 {{ department }}
               </option>
             </b-select>
           </b-field>
-          <hr>
+          <hr />
           <b-field label="Subject" message="Message subject" horizontal>
-            <b-input v-model="form.subject" placeholder="e.g. Partnership proposal" required />
+            <b-input
+              v-model="form.subject"
+              placeholder="e.g. Partnership proposal"
+              required
+            />
           </b-field>
-          <b-field label="Question" message="Your question. Max 255 characters" horizontal>
-            <b-input v-model="form.question" type="textarea" placeholder="Explain how we can help you" maxlength="255" required />
+          <b-field
+            label="Question"
+            message="Your question. Max 255 characters"
+            horizontal
+          >
+            <b-input
+              v-model="form.question"
+              type="textarea"
+              placeholder="Explain how we can help you"
+              maxlength="255"
+              required
+            />
           </b-field>
-          <hr>
+          <hr />
           <b-field horizontal>
             <b-field grouped>
               <div class="control">
@@ -68,19 +96,26 @@
       </card-component>
       <card-component title="Custom elements" icon="ballot-outline">
         <b-field label="Checkbox" class="has-check" horizontal>
-          <checkbox-picker v-model="customElementsForm.checkbox" :options="{lorem:'Lorem', ipsum:'Ipsum', dolore:'Dolore'}" type="is-primary" />
+          <checkbox-picker
+            v-model="customElementsForm.checkbox"
+            :options="{ lorem: 'Lorem', ipsum: 'Ipsum', dolore: 'Dolore' }"
+            type="is-primary"
+          />
         </b-field>
-        <hr>
+        <hr />
         <b-field label="Radio" class="has-check" horizontal>
-          <radio-picker v-model="customElementsForm.radio" :options="{one:'One',two:'Two'}" />
+          <radio-picker
+            v-model="customElementsForm.radio"
+            :options="{ one: 'One', two: 'Two' }"
+          />
         </b-field>
-        <hr>
+        <hr />
         <b-field label="Switch" horizontal>
           <b-switch v-model="customElementsForm.switch">
             Default
           </b-switch>
         </b-field>
-        <hr>
+        <hr />
         <b-field label="File" horizontal>
           <file-picker v-model="customElementsForm.file" />
         </b-field>
@@ -99,8 +134,15 @@ import FilePicker from '@/components/FilePicker'
 import HeroBar from '@/components/HeroBar'
 export default {
   name: 'Forms',
-  components: { HeroBar, FilePicker, RadioPicker, CheckboxPicker, CardComponent, TitleBar },
-  data () {
+  components: {
+    HeroBar,
+    FilePicker,
+    RadioPicker,
+    CheckboxPicker,
+    CardComponent,
+    TitleBar,
+  },
+  data() {
     return {
       isLoading: false,
       form: {
@@ -109,34 +151,25 @@ export default {
         phone: null,
         department: null,
         subject: null,
-        question: null
+        question: null,
       },
       customElementsForm: {
         checkbox: [],
         radio: null,
         switch: true,
-        file: null
+        file: null,
       },
-      departments: [
-        'Business Development',
-        'Marketing',
-        'Sales'
-      ]
+      departments: ['Business Development', 'Marketing', 'Sales'],
     }
   },
   computed: {
-    titleStack () {
-      return [
-        'Admin',
-        'Forms'
-      ]
-    }
+    titleStack() {
+      return ['Admin', 'Forms']
+    },
   },
   methods: {
-    submit () {
-
-    },
-    reset () {
+    submit() {},
+    reset() {
       this.form = mapValues(this.form, (item) => {
         if (item && typeof item === 'object') {
           return []
@@ -146,14 +179,14 @@ export default {
 
       this.$buefy.snackbar.open({
         message: 'Reset successfully',
-        queue: false
+        queue: false,
       })
+    },
+  },
+  head() {
+    return {
+      title: 'Forms — Admin Null Nuxt.js Bulma',
     }
   },
-  head () {
-    return {
-      title: 'Forms — Admin Null Nuxt.js Bulma'
-    }
-  }
 }
 </script>

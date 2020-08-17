@@ -1,7 +1,11 @@
 <template>
   <card-component title="Change Password" icon="lock">
     <form @submit.prevent="submit">
-      <b-field horizontal label="Current password" message="Required. Your current password">
+      <b-field
+        horizontal
+        label="Current password"
+        message="Required. Your current password"
+      >
         <b-input
           v-model="form.password_current"
           name="password_current"
@@ -10,11 +14,21 @@
           autcomplete="current-password"
         />
       </b-field>
-      <hr>
+      <hr />
       <b-field horizontal label="New password" message="Required. New password">
-        <b-input v-model="form.password" name="password" type="password" required autocomplete="new-password" />
+        <b-input
+          v-model="form.password"
+          name="password"
+          type="password"
+          required
+          autocomplete="new-password"
+        />
       </b-field>
-      <b-field horizontal label="Confirm password" message="Required. New password one more time">
+      <b-field
+        horizontal
+        label="Confirm password"
+        message="Required. New password one more time"
+      >
         <b-input
           v-model="form.password_confirmation"
           name="password_confirmation"
@@ -23,10 +37,14 @@
           autocomplete="new-password"
         />
       </b-field>
-      <hr>
+      <hr />
       <b-field horizontal>
         <div class="control">
-          <button type="submit" class="button is-primary" :class="{'is-loading':isLoading}">
+          <button
+            type="submit"
+            class="button is-primary"
+            :class="{ 'is-loading': isLoading }"
+          >
             Submit
           </button>
         </div>
@@ -40,29 +58,32 @@ import CardComponent from '@/components/CardComponent'
 export default {
   name: 'PasswordUpdateForm',
   components: {
-    CardComponent
+    CardComponent,
   },
-  data () {
+  data() {
     return {
       isLoading: false,
       form: {
         password_current: null,
         password: null,
-        password_confirmation: null
-      }
+        password_confirmation: null,
+      },
     }
   },
   methods: {
-    submit () {
+    submit() {
       this.isLoading = true
       setTimeout(() => {
         this.isLoading = false
-        this.$buefy.snackbar.open({
-          message: 'Updated',
-          queue: false
-        }, 500)
+        this.$buefy.snackbar.open(
+          {
+            message: 'Updated',
+            queue: false,
+          },
+          500
+        )
       })
-    }
-  }
+    },
+  },
 }
 </script>

@@ -15,11 +15,18 @@
         </div>
       </notification>
 
-      <card-component class="has-table has-mobile-sort-spaced" title="Clients" icon="account-multiple">
-        <clients-table-sample :data-url="`${$router.options.base}data-sources/clients.json`" :checkable="true" />
+      <card-component
+        class="has-table has-mobile-sort-spaced"
+        title="Clients"
+        icon="account-multiple"
+      >
+        <clients-table-sample
+          :data-url="`${$router.options.base}data-sources/clients.json`"
+          :checkable="true"
+        />
       </card-component>
 
-      <hr>
+      <hr />
 
       <notification class="is-info">
         <div>
@@ -29,10 +36,13 @@
       </notification>
 
       <card-component class="has-table has-mobile-sort-spaced">
-        <clients-table-sample :data-url="`${$router.options.base}data-sources/clients.json`" :checkable="true" />
+        <clients-table-sample
+          :data-url="`${$router.options.base}data-sources/clients.json`"
+          :checkable="true"
+        />
       </card-component>
 
-      <hr>
+      <hr />
 
       <notification class="is-info">
         <div>
@@ -56,19 +66,22 @@ import TitleBar from '@/components/TitleBar'
 import HeroBar from '@/components/HeroBar'
 export default {
   name: 'Tables',
-  components: { HeroBar, TitleBar, CardComponent, ClientsTableSample, Notification },
+  components: {
+    HeroBar,
+    TitleBar,
+    CardComponent,
+    ClientsTableSample,
+    Notification,
+  },
   computed: {
-    titleStack () {
-      return [
-        'Admin',
-        'Tables'
-      ]
+    titleStack() {
+      return ['Admin', 'Tables']
+    },
+  },
+  head() {
+    return {
+      title: 'Tables — Admin Null Nuxt.js Bulma',
     }
   },
-  head () {
-    return {
-      title: 'Tables — Admin Null Nuxt.js Bulma'
-    }
-  }
 }
 </script>

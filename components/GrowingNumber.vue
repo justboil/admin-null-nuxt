@@ -1,7 +1,5 @@
 <template>
-  <div>
-    {{ prefix }}{{ newValueFormatted }}{{ suffix }}
-  </div>
+  <div>{{ prefix }}{{ newValueFormatted }}{{ suffix }}</div>
 </template>
 
 <script>
@@ -12,46 +10,48 @@ export default {
   props: {
     prefix: {
       type: String,
-      default: null
+      default: null,
     },
     suffix: {
       type: String,
-      default: null
+      default: null,
     },
     value: {
       type: Number,
-      default: 0
+      default: 0,
     },
     duration: {
       type: Number,
-      default: 500
-    }
+      default: 500,
+    },
   },
-  data () {
+  data() {
     return {
       newValue: 0,
-      step: 0
+      step: 0,
     }
   },
   computed: {
-    newValueFormatted () {
-      return (this.newValue < 1000) ? this.newValue : numeral(this.newValue).format('0,0')
-    }
+    newValueFormatted() {
+      return this.newValue < 1000
+        ? this.newValue
+        : numeral(this.newValue).format('0,0')
+    },
   },
   watch: {
-    value () {
+    value() {
       this.growInit()
-    }
+    },
   },
-  mounted () {
+  mounted() {
     this.growInit()
   },
   methods: {
-    growInit () {
+    growInit() {
       const m = this.value / (this.duration / 25)
       this.grow(m)
     },
-    grow (m) {
+    grow(m) {
       const v = Math.ceil(this.newValue + m)
 
       if (v > this.value) {
@@ -63,7 +63,7 @@ export default {
       setTimeout(() => {
         this.grow(m)
       }, 25)
-    }
-  }
+    },
+  },
 }
 </script>

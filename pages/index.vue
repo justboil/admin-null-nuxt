@@ -6,7 +6,13 @@
     </hero-bar>
     <section class="section is-main-section">
       <tiles>
-        <card-widget class="tile is-child" type="is-primary" icon="account-multiple" :number="512" label="Clients" />
+        <card-widget
+          class="tile is-child"
+          type="is-primary"
+          icon="account-multiple"
+          :number="512"
+          label="Clients"
+        />
         <card-widget
           class="tile is-child"
           type="is-info"
@@ -25,11 +31,16 @@
         />
       </tiles>
 
-      <card-component title="Performance" icon="finance" header-icon="reload" @header-icon-click="fillChartData">
+      <card-component
+        title="Performance"
+        icon="finance"
+        header-icon="reload"
+        @header-icon-click="fillChartData"
+      >
         <div v-if="defaultChart.chartData" class="chart-area">
           <line-chart
             ref="bigChart"
-            style="height: 100%"
+            style="height: 100%;"
             chart-id="big-line-chart"
             :chart-data="defaultChart.chartData"
             :extra-options="defaultChart.extraOptions"
@@ -38,7 +49,9 @@
       </card-component>
 
       <card-component title="Clients" class="has-table has-mobile-sort-spaced">
-        <clients-table-sample :data-url="`${$router.options.base}data-sources/clients.json`" />
+        <clients-table-sample
+          :data-url="`${$router.options.base}data-sources/clients.json`"
+        />
       </card-component>
     </section>
   </div>
@@ -63,34 +76,31 @@ export default {
     CardWidget,
     Tiles,
     HeroBar,
-    TitleBar
+    TitleBar,
   },
-  data () {
+  data() {
     return {
       defaultChart: {
         chartData: null,
-        extraOptions: chartConfig.chartOptionsMain
-      }
+        extraOptions: chartConfig.chartOptionsMain,
+      },
     }
   },
   computed: {
-    titleStack () {
-      return [
-        'Admin',
-        'Dashboard'
-      ]
-    }
+    titleStack() {
+      return ['Admin', 'Dashboard']
+    },
   },
-  mounted () {
+  mounted() {
     this.fillChartData()
 
     this.$buefy.snackbar.open({
       message: 'Welcome back',
-      queue: false
+      queue: false,
     })
   },
   methods: {
-    randomChartData (n) {
+    randomChartData(n) {
       const data = []
 
       for (let i = 0; i < n; i++) {
@@ -99,7 +109,7 @@ export default {
 
       return data
     },
-    fillChartData () {
+    fillChartData() {
       this.defaultChart.chartData = {
         datasets: [
           {
@@ -115,7 +125,7 @@ export default {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: this.randomChartData(9)
+            data: this.randomChartData(9),
           },
           {
             fill: false,
@@ -130,7 +140,7 @@ export default {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: this.randomChartData(9)
+            data: this.randomChartData(9),
           },
           {
             fill: false,
@@ -145,17 +155,17 @@ export default {
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: this.randomChartData(9)
-          }
+            data: this.randomChartData(9),
+          },
         ],
-        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09']
+        labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
       }
+    },
+  },
+  head() {
+    return {
+      title: 'Dashboard — Admin Null Nuxt.js Bulma',
     }
   },
-  head () {
-    return {
-      title: 'Dashboard — Admin Null Nuxt.js Bulma'
-    }
-  }
 }
 </script>

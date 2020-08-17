@@ -18,19 +18,19 @@
 <script>
 export default {
   name: 'Notification',
-  data () {
+  data() {
     return {
-      isDismissed: false
+      isDismissed: false,
     }
   },
   methods: {
-    dismiss () {
+    dismiss() {
       this.isDismissed = true
       this.$buefy.snackbar.open({
         message: 'Dismissed',
-        queue: false
+        queue: false,
       })
-    }
-  }
+    },
+  },
 }
 </script>

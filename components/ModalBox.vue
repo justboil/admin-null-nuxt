@@ -7,7 +7,9 @@
         </p>
       </header>
       <section class="modal-card-body">
-        <p>This will permanently delete <b>{{ trashObjectName }}</b></p>
+        <p>
+          This will permanently delete <b>{{ trashObjectName }}</b>
+        </p>
         <p>Action can not be undone.</p>
       </section>
       <footer class="modal-card-foot">
@@ -28,35 +30,35 @@ export default {
   props: {
     isActive: {
       type: Boolean,
-      default: false
+      default: false,
     },
     trashObjectName: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
-  data () {
+  data() {
     return {
-      isModalActive: false
+      isModalActive: false,
     }
   },
   watch: {
-    isActive (newValue) {
+    isActive(newValue) {
       this.isModalActive = newValue
     },
-    isModalActive (newValue) {
+    isModalActive(newValue) {
       if (!newValue) {
         this.cancel()
       }
-    }
+    },
   },
   methods: {
-    cancel () {
+    cancel() {
       this.$emit('cancel')
     },
-    confirm () {
+    confirm() {
       this.$emit('confirm')
-    }
-  }
+    },
+  },
 }
 </script>

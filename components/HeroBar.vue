@@ -25,8 +25,8 @@ export default {
   props: {
     hasRightVisible: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>

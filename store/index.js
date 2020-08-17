@@ -15,17 +15,17 @@ export const state = () => ({
   isAsideMobileExpanded: false,
 
   /* Dark mode */
-  isDarkModeActive: false
+  isDarkModeActive: false,
 })
 
 export const mutations = {
   /* A fit-them-all commit */
-  basic (state, payload) {
+  basic(state, payload) {
     state[payload.key] = payload.value
   },
 
   /* User */
-  user (state, payload) {
+  user(state, payload) {
     if (payload.name) {
       state.userName = payload.name
     }
@@ -38,7 +38,7 @@ export const mutations = {
   },
 
   /* Aside Mobile */
-  asideMobileStateToggle (state, payload = null) {
+  asideMobileStateToggle(state, payload = null) {
     const htmlClassName = 'has-aside-mobile-expanded'
 
     let isShow
@@ -59,7 +59,7 @@ export const mutations = {
   },
 
   /* Dark Mode */
-  darkModeToggle (state, payload = null) {
+  darkModeToggle(state, payload = null) {
     const htmlClassName = 'is-dark-mode-active'
 
     state.isDarkModeActive = !state.isDarkModeActive
@@ -69,5 +69,5 @@ export const mutations = {
     } else {
       document.documentElement.classList.remove(htmlClassName)
     }
-  }
+  },
 }

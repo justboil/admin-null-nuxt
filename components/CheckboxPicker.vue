@@ -1,7 +1,12 @@
 <template>
   <b-field grouped group-multiline>
-    <div v-for="(v,k) in options" :key="k" class="control">
-      <b-checkbox v-model="newValue" :native-value="k" :type="type" @input="input">
+    <div v-for="(v, k) in options" :key="k" class="control">
+      <b-checkbox
+        v-model="newValue"
+        :native-value="k"
+        :type="type"
+        @input="input"
+      >
         {{ v }}
       </b-checkbox>
     </div>
@@ -14,34 +19,34 @@ export default {
   props: {
     options: {
       type: Object,
-      default: null
+      default: null,
     },
     type: {
       type: String,
-      default: null
+      default: null,
     },
     value: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
-  data () {
+  data() {
     return {
-      newValue: []
+      newValue: [],
     }
   },
   watch: {
-    value (newValue) {
+    value(newValue) {
       this.newValue = newValue
-    }
+    },
   },
-  created () {
+  created() {
     this.newValue = this.value
   },
   methods: {
-    input () {
+    input() {
       this.$emit('input', this.newValue)
-    }
-  }
+    },
+  },
 }
 </script>

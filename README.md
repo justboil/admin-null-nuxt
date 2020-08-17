@@ -1,8 +1,8 @@
 # [Admin Null — Free Nuxt Bulma Admin Dashboard](https://justboil.me/bulma-admin-template/null-nuxt)
 
-[![version](https://img.shields.io/badge/version-1.2.0-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)
+[![version](https://img.shields.io/github/v/release/justboil/admin-null-nuxt)](https://justboil.me/bulma-admin-template/null-nuxt)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)
 
-[![Nuxt Bulma free admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
+[![Free Nuxt Bulma admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
 
 **Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma admin dashboard.
 
@@ -23,13 +23,20 @@
 
 ## Other versions
 
-This is Nuxt.js dashboard version (Nuxt.js, Bulma, Buefy, Vue.js). Other versions below.
+This is Bulma Nuxt.js Buefy dashboard version.
 
-#### Vue.js Vue CLI version
+More info on free & premium versions of Admin Null dashboard: https://justboil.me/bulma-admin-template/null
 
-**Free** Bulma Vue.js Buefy admin dashboard — https://github.com/vikdiesel/admin-null-vue-bulma-dashboard
-
-**Premium** Bulma Vue.js Buefy admin dashboard — https://justboil.me/bulma-admin-template/null
+<table>
+    <tr>
+        <td align="center"><a href="https://github.com/vikdiesel/admin-null-vue-bulma-dashboard" title="Free Bulma Vue.js Buefy admin dashboard"><img src="https://justboil.me/svg/vuejs.svg" width="64" height="64"></a></td>
+        <td align="center"><a href="https://github.com/justboil/admin-null-nuxt" title="Free Bulma Nuxt.js Buefy admin dashboard"><img src="https://justboil.me/svg/nuxt.svg" width="64" height="64"></a></td>
+    </tr>
+    <tr>
+        <td align="center">Bulma admin dashboard<br/>Vue.js Buefy<br/><br/><a href="https://github.com/vikdiesel/admin-null-vue-bulma-dashboard" title="Free Bulma Vue.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/null" title="Premium Bulma Vue.js Buefy admin dashboard">Premium</a></td>
+        <td align="center">Bulma admin dashboard<br/>Nuxt.js Buefy<br/><br/><a href="https://github.com/justboil/admin-null-nuxt" title="Free Bulma Nuxt.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/null-nuxt" title="Premium Bulma Nuxt.js Buefy admin dashboard">Premium</a></td>
+    </tr>
+</table>
 
 ## Description & Demo
 
@@ -69,11 +76,11 @@ To launch server run `npm run start`
 
 #### Generate static project
 
-To generate static project run `npm run generate`
+To generate static project run `npm run build` && `npm run export`
 
 ## Browser Support
 
-We try to make sure Dashboard works well in the latest versions of all major browsers
+We try to make sure dashboard works well in the latest versions of all major browsers
 
 <img src="https://justboil.me/images/browsers-svg/chrome.svg" width="64" height="64" alt="Chrome"> <img src="https://justboil.me/images/browsers-svg/firefox.svg" width="64" height="64" alt="Firefox"> <img src="https://justboil.me/images/browsers-svg/edge.svg" width="64" height="64" alt="Edge"> <img src="https://justboil.me/images/browsers-svg/safari.svg" width="64" height="64" alt="Safari"> <img src="https://justboil.me/images/browsers-svg/opera.svg" width="64" height="64" alt="Opera">
 
@@ -83,7 +90,7 @@ JustBoil's free items are limited to community support on GitHub.
 
 The issue list is reserved exclusively for bug reports and feature requests. That means we do not accept usage questions. If you open an issue that does not conform to the requirements, it will be closed.
 
-1. Make sure that you are using the latest version of the Dashboard. Issues for outdated versions are irrelevant
+1. Make sure you are using the latest version of the dashboard
 2. Provide steps to reproduce
 3. Provide an expected behavior
 4. Describe what is actually happening 

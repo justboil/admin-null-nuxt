@@ -5,7 +5,13 @@
         <b-icon v-if="icon" :icon="icon" custom-size="default" />
         {{ title }}
       </p>
-      <a v-if="headerIcon" href="#" class="card-header-icon" aria-label="more options" @click.prevent="headerIconClick">
+      <a
+        v-if="headerIcon"
+        href="#"
+        class="card-header-icon"
+        aria-label="more options"
+        @click.prevent="headerIconClick"
+      >
         <b-icon :icon="headerIcon" custom-size="default" />
       </a>
     </header>
@@ -21,21 +27,21 @@ export default {
   props: {
     title: {
       type: String,
-      default: null
+      default: null,
     },
     icon: {
       type: String,
-      default: null
+      default: null,
     },
     headerIcon: {
       type: String,
-      default: null
-    }
+      default: null,
+    },
   },
   methods: {
-    headerIconClick () {
+    headerIconClick() {
       this.$emit('header-icon-click')
-    }
-  }
+    },
+  },
 }
 </script>

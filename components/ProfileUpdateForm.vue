@@ -4,17 +4,21 @@
       <b-field horizontal label="Avatar">
         <file-picker />
       </b-field>
-      <hr>
+      <hr />
       <b-field horizontal label="Name" message="Required. Your name">
         <b-input v-model="form.name" name="name" required />
       </b-field>
       <b-field horizontal label="E-mail" message="Required. Your e-mail">
         <b-input v-model="form.email" name="email" type="email" required />
       </b-field>
-      <hr>
+      <hr />
       <b-field horizontal>
         <div class="control">
-          <button type="submit" class="button is-primary" :class="{'is-loading':isLoading}">
+          <button
+            type="submit"
+            class="button is-primary"
+            :class="{ 'is-loading': isLoading }"
+          >
             Submit
           </button>
         </div>
@@ -32,48 +36,45 @@ export default {
   name: 'ProfileUpdateForm',
   components: {
     CardComponent,
-    FilePicker
+    FilePicker,
   },
-  data () {
+  data() {
     return {
       isFileUploaded: false,
       isLoading: false,
       form: {
         name: null,
-        email: null
-      }
+        email: null,
+      },
     }
   },
   computed: {
-    ...mapState([
-      'userName',
-      'userEmail'
-    ])
+    ...mapState(['userName', 'userEmail']),
   },
   watch: {
-    userName (newValue) {
+    userName(newValue) {
       this.form.name = newValue
     },
-    userEmail (newValue) {
+    userEmail(newValue) {
       this.form.email = newValue
-    }
+    },
   },
-  mounted () {
+  mounted() {
     this.form.name = this.userName
     this.form.email = this.userEmail
   },
   methods: {
-    submit () {
+    submit() {
       this.isLoading = true
       setTimeout(() => {
         this.isLoading = false
         this.$store.commit('user', this.form)
         this.$buefy.snackbar.open({
           message: 'Updated',
-          queue: false
+          queue: false,
         })
       }, 500)
-    }
-  }
+    },
+  },
 }
 </script>

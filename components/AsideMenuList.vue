@@ -1,7 +1,7 @@
 <template>
-  <ul :class="{'menu-list':!isSubmenuList}">
+  <ul :class="{ 'menu-list': !isSubmenuList }">
     <aside-menu-item
-      v-for="(item,index) in menu"
+      v-for="(item, index) in menu"
       :key="index"
       :item="item"
       @menu-click="menuClick"
@@ -15,22 +15,22 @@ import AsideMenuItem from '@/components/AsideMenuItem'
 export default {
   name: 'AsideMenuList',
   components: {
-    AsideMenuItem
+    AsideMenuItem,
   },
   props: {
     isSubmenuList: {
       type: Boolean,
-      default: false
+      default: false,
     },
     menu: {
       type: Array,
-      default: () => []
-    }
+      default: () => [],
+    },
   },
   methods: {
-    menuClick (item) {
+    menuClick(item) {
       this.$emit('menu-click', item)
-    }
-  }
+    },
+  },
 }
 </script>

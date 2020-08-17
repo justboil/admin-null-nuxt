@@ -1,6 +1,6 @@
 <template>
   <div class="notification is-card-toolbar">
-    <div class="level" :class="{'is-mobile':isMobile}">
+    <div class="level" :class="{ 'is-mobile': isMobile }">
       <div class="level-left">
         <div class="level-item">
           <slot name="left" />
@@ -21,8 +21,8 @@ export default {
   props: {
     isMobile: {
       type: Boolean,
-      default: false
-    }
-  }
+      default: false,
+    },
+  },
 }
 </script>

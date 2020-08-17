@@ -14,24 +14,40 @@
         </div>
       </notification>
       <tiles>
-        <card-component :title="formCardTitle" icon="account-edit" class="tile is-child">
+        <card-component
+          :title="formCardTitle"
+          icon="account-edit"
+          class="tile is-child"
+        >
           <form @submit.prevent="submit">
             <b-field label="ID" horizontal>
               <b-input v-model="form.id" custom-class="is-static" readonly />
             </b-field>
-            <hr>
+            <hr />
             <b-field label="Avatar" horizontal>
               <file-picker />
             </b-field>
-            <hr>
+            <hr />
             <b-field label="Name" message="Client name" horizontal>
-              <b-input v-model="form.name" placeholder="e.g. John Doe" required />
+              <b-input
+                v-model="form.name"
+                placeholder="e.g. John Doe"
+                required
+              />
             </b-field>
             <b-field label="Company" message="Client's company name" horizontal>
-              <b-input v-model="form.company" placeholder="e.g. Berton & Steinway" required />
+              <b-input
+                v-model="form.company"
+                placeholder="e.g. Berton & Steinway"
+                required
+              />
             </b-field>
             <b-field label="City" message="Client's city" horizontal>
-              <b-input v-model="form.city" placeholder="e.g. Geoffreyton" required />
+              <b-input
+                v-model="form.city"
+                placeholder="e.g. Geoffreyton"
+                required
+              />
             </b-field>
             <b-field label="Created" horizontal>
               <b-datepicker
@@ -41,21 +57,33 @@
                 @input="input"
               />
             </b-field>
-            <hr>
+            <hr />
             <b-field label="Progress" horizontal>
               <b-slider v-model="form.progress" />
             </b-field>
-            <hr>
+            <hr />
             <b-field horizontal>
-              <b-button type="is-primary" :loading="isLoading" native-type="submit">
+              <b-button
+                type="is-primary"
+                :loading="isLoading"
+                native-type="submit"
+              >
                 Submit
               </b-button>
             </b-field>
           </form>
         </card-component>
-        <card-component v-if="isProfileExists" title="Client Profile" icon="account" class="tile is-child">
-          <user-avatar :avatar="form.avatar" class="image has-max-width is-aligned-center" />
-          <hr>
+        <card-component
+          v-if="isProfileExists"
+          title="Client Profile"
+          icon="account"
+          class="tile is-child"
+        >
+          <user-avatar
+            :avatar="form.avatar"
+            class="image has-max-width is-aligned-center"
+          />
+          <hr />
           <b-field label="Name">
             <b-input :value="form.name" custom-class="is-static" readonly />
           </b-field>
@@ -66,11 +94,19 @@
             <b-input :value="form.city" custom-class="is-static" readonly />
           </b-field>
           <b-field label="Created">
-            <b-input :value="createdReadable" custom-class="is-static" readonly />
+            <b-input
+              :value="createdReadable"
+              custom-class="is-static"
+              readonly
+            />
           </b-field>
-          <hr>
+          <hr />
           <b-field label="Progress">
-            <progress class="progress is-small is-primary" :value="form.progress" max="100">
+            <progress
+              class="progress is-small is-primary"
+              :value="form.progress"
+              max="100"
+            >
               {{ form.progress }}
             </progress>
           </b-field>
@@ -94,18 +130,26 @@ import Notification from '@/components/Notification'
 
 export default {
   name: 'ClientForm',
-  components: { UserAvatar, FilePicker, CardComponent, Tiles, HeroBar, TitleBar, Notification },
-  data () {
+  components: {
+    UserAvatar,
+    FilePicker,
+    CardComponent,
+    Tiles,
+    HeroBar,
+    TitleBar,
+    Notification,
+  },
+  data() {
     return {
       id: null,
       isLoading: false,
       form: this.getClearFormObject(),
       createdReadable: null,
-      isProfileExists: false
+      isProfileExists: false,
     }
   },
   computed: {
-    titleStack () {
+    titleStack() {
       let lastCrumb
 
       if (this.isProfileExists) {
@@ -114,46 +158,42 @@ export default {
         lastCrumb = 'New client'
       }
 
-      return [
-        'Admin',
-        'Clients',
-        lastCrumb
-      ]
+      return ['Admin', 'Clients', lastCrumb]
     },
-    heroTitle () {
+    heroTitle() {
       if (this.isProfileExists) {
         return this.form.name
       } else {
         return 'Create Client'
       }
     },
-    heroRouterLinkTo () {
+    heroRouterLinkTo() {
       if (this.isProfileExists) {
         return { name: 'client.new' }
       } else {
         return '/'
       }
     },
-    heroRouterLinkLabel () {
+    heroRouterLinkLabel() {
       if (this.isProfileExists) {
         return 'New client'
       } else {
         return 'Dashboard'
       }
     },
-    formCardTitle () {
+    formCardTitle() {
       if (this.isProfileExists) {
         return 'Edit Client'
       } else {
         return 'New Client'
       }
-    }
+    },
   },
-  created () {
+  created() {
     this.getData()
   },
   methods: {
-    getClearFormObject () {
+    getClearFormObject() {
       return {
         id: null,
         name: null,
@@ -161,21 +201,26 @@ export default {
         city: null,
         created_date: new Date(),
         created_mm_dd_yyyy: null,
-        progress: 0
+        progress: 0,
       }
     },
-    getData () {
+    getData() {
       if (this.$route.params.id) {
         axios
           .get(`${this.$router.options.base}data-sources/clients.json`)
           .then((r) => {
-            const item = find(r.data.data, item => item.id === parseInt(this.$route.params.id))
+            const item = find(
+              r.data.data,
+              (item) => item.id === parseInt(this.$route.params.id)
+            )
 
             if (item) {
               this.isProfileExists = true
               this.form = item
               this.form.created_date = new Date(item.created_mm_dd_yyyy)
-              this.createdReadable = dayjs(new Date(item.created_mm_dd_yyyy)).format('MMM D, YYYY')
+              this.createdReadable = dayjs(
+                new Date(item.created_mm_dd_yyyy)
+              ).format('MMM D, YYYY')
             } else {
               this.$router.push({ name: 'client.new' })
             }
@@ -184,15 +229,15 @@ export default {
             this.$buefy.toast.open({
               message: `Error: ${e.message}`,
               type: 'is-danger',
-              queue: false
+              queue: false,
             })
           })
       }
     },
-    input (v) {
+    input(v) {
       this.createdReadable = dayjs(v).format('MMM D, YYYY')
     },
-    submit () {
+    submit() {
       this.isLoading = true
 
       setTimeout(() => {
@@ -200,15 +245,15 @@ export default {
 
         this.$buefy.snackbar.open({
           message: 'Demo only',
-          queue: false
+          queue: false,
         })
       }, 500)
+    },
+  },
+  head() {
+    return {
+      title: 'Client — Admin Null Nuxt.js Bulma',
     }
   },
-  head () {
-    return {
-      title: 'Client — Admin Null Nuxt.js Bulma'
-    }
-  }
 }
 </script>

@@ -5,21 +5,22 @@ export default {
   extends: Line,
   mixins: [mixins.reactiveProp],
   props: {
-    extraOptions: Object
+    extraOptions: Object,
   },
-  data () {
+  data() {
     return {
-      ctx: null
+      ctx: null,
     }
   },
-  mounted () {
-    this.$watch('chartData', (newVal, oldVal) => {
-      if (!oldVal) {
-        this.renderChart(
-          this.chartData,
-          this.extraOptions
-        )
-      }
-    }, { immediate: true })
-  }
+  mounted() {
+    this.$watch(
+      'chartData',
+      (newVal, oldVal) => {
+        if (!oldVal) {
+          this.renderChart(this.chartData, this.extraOptions)
+        }
+      },
+      { immediate: true }
+    )
+  },
 }
