@@ -1,13 +1,14 @@
-# [Admin Null — Free Nuxt Bulma Admin Dashboard](https://justboil.me/bulma-admin-template/null-nuxt)
+# [Admin Null — Free Nuxt Bulma Admin Dashboard with dark mode](https://justboil.me/bulma-admin-template/null-nuxt)
 
 [![version](https://img.shields.io/github/v/release/justboil/admin-null-nuxt)](https://justboil.me/bulma-admin-template/null-nuxt)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)
 
 [![Free Nuxt Bulma admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
 
-**Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma admin dashboard.
+**Admin Null Nuxt.js** is simple, beautiful and free Nuxt.js Bulma admin dashboard with dark mode.
 
 * Free under MIT License
 * Built with Bulma, Buefy, Vue.js & Nuxt.js
+* Light & Dark modes
 * SCSS sources with variables
 * [Premium version](https://justboil.me/bulma-admin-template/null-nuxt) available
 
@@ -23,7 +24,7 @@
 
 ## Other versions
 
-This is Bulma Nuxt.js Buefy dashboard version.
+This is Bulma Nuxt.js Buefy dashboard version / light and dark modes.
 
 More info on free & premium versions of Admin Null dashboard: https://justboil.me/bulma-admin-template/null
 
