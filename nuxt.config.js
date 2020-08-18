@@ -66,8 +66,14 @@ export default {
   css: ['./assets/scss/main.scss'],
   /*
    ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
    */
   plugins: [{ src: '~/plugins/after-each.js', mode: 'client' }],
+  /*
+   ** Auto import components
+   ** See https://nuxtjs.org/api/configuration-components
+   */
+  components: false,
   /*
    ** Nuxt.js dev-modules
    */
@@ -84,8 +90,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
   ],
   /*
    ** Axios module configuration
@@ -94,6 +98,7 @@ export default {
   axios: {},
   /*
    ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {
     /*
