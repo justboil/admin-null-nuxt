@@ -18,7 +18,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.1",
     "@nuxtjs/pwa": "^3.0.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "dayjs": "^1.8.33",
     "lodash": "^4.17.20",
     "numeral": "^2.0.6",
