@@ -1,6 +1,6 @@
-# [Admin Null — Free Nuxt Bulma Admin Dashboard with dark mode](https://justboil.me/bulma-admin-template/null-nuxt)
+# [Admin Null — Free Nuxt Bulma Admin Dashboard with dark mode](https://justboil.me/bulma-admin-template/one#from-null)
 
-[![version](https://img.shields.io/github/v/release/justboil/admin-null-nuxt)](https://justboil.me/bulma-admin-template/null-nuxt)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/null-nuxt)
+[![version](https://img.shields.io/github/v/release/justboil/admin-null-nuxt)](https://justboil.me/bulma-admin-template/one#from-null)  [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://justboil.me/bulma-admin-template/one#from-null)
 
 [![Free Nuxt Bulma admin dashboard](https://justboil.me/images/null-nuxt/repository-preview-hi-res.png)](https://justboil.github.io/admin-null-nuxt/)
 
@@ -10,7 +10,7 @@
 * Built with Bulma, Buefy, Vue.js & Nuxt.js
 * Light & Dark modes
 * SCSS sources with variables
-* [Premium version](https://justboil.me/bulma-admin-template/null-nuxt) available
+* [Premium version](https://justboil.me/bulma-admin-template/one#from-null) available
 
 ## Table of Contents
 
@@ -44,7 +44,7 @@ This is Bulma Nuxt.js Buefy dashboard version / light and dark modes.
 
 ### Bulma
 
-More info on free & premium versions of Admin Null dashboard: https://justboil.me/bulma-admin-template/null
+More info on free & premium versions of Admin Null dashboard: https://justboil.me/bulma-admin-template/one#from-null
 
 <table>
     <tr>
@@ -55,8 +55,8 @@ More info on free & premium versions of Admin Null dashboard: https://justboil.m
         <td align="center"><a href="https://github.com/justboil/admin-null-nuxt" title="Free Bulma Nuxt.js Buefy admin dashboard"><img src="https://justboil.me/svg/nuxt.svg" width="64" height="64"></a></td>
     </tr>
     <tr>
-        <td align="center">Bulma admin dashboard<br/>Vue.js Buefy<br/><br/><a href="https://github.com/vikdiesel/admin-null-vue-bulma-dashboard" title="Free Bulma Vue.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/null" title="Premium Bulma Vue.js Buefy admin dashboard">Premium</a></td>
-        <td align="center">Bulma admin dashboard<br/>Nuxt.js Buefy<br/><br/><a href="https://github.com/justboil/admin-null-nuxt" title="Free Bulma Nuxt.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/null-nuxt" title="Premium Bulma Nuxt.js Buefy admin dashboard">Premium</a></td>
+        <td align="center">Bulma admin dashboard<br/>Vue.js Buefy<br/><br/><a href="https://github.com/vikdiesel/admin-null-vue-bulma-dashboard" title="Free Bulma Vue.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/one#from-null" title="Premium Bulma Vue.js Buefy admin dashboard">Premium</a></td>
+        <td align="center">Bulma admin dashboard<br/>Nuxt.js Buefy<br/><br/><a href="https://github.com/justboil/admin-null-nuxt" title="Free Bulma Nuxt.js Buefy admin dashboard">Free</a> | <a href="https://justboil.me/bulma-admin-template/one#from-null" title="Premium Bulma Nuxt.js Buefy admin dashboard">Premium</a></td>
     </tr>
 </table>
 
@@ -64,7 +64,7 @@ More info on free & premium versions of Admin Null dashboard: https://justboil.m
 
 #### Description
 
-https://justboil.me/bulma-admin-template/null-nuxt
+https://justboil.me/bulma-admin-template/one#from-null
 
 #### Free Dashboard Demo
 
@@ -72,7 +72,7 @@ https://justboil.github.io/admin-null-nuxt/
 
 #### Premium Dashboard Demo
 
-https://admin-null-nuxt.justboil.me
+https://admin-one.justboil.me/?style=light-dark
 
 ## Quick Start
 
